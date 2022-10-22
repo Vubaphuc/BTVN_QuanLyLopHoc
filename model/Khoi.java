@@ -8,15 +8,13 @@ public class Khoi {
     private int kyHoc;
     private ArrayList<School> schools = new ArrayList<>();
 
-    public Khoi(String tenLop, int kyHoc, ArrayList<School> schools) {
-    }
 
     public Khoi() {
     }
 
-    public Khoi(String lop, int khoaHoc, int kyHoc, ArrayList<School> schools) {
+    public Khoi(String lop, int kyHoc, ArrayList<School> schools) {
         this.lop = lop;
-        this.khoaHoc = khoaHoc;
+
         this.kyHoc = kyHoc;
         this.schools = schools;
     }
