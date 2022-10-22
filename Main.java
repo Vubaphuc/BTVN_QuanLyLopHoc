@@ -21,21 +21,32 @@ public class Main {
                     khoiModel.Khoi(sc);
                     break;
                 case 2:
-                    int namSinh = 1195;
+                    int namSinh = 1985;
                     String que = "Thái Nguyên";
-
-                    for (int i = 0; i <khoi.getSchools().size() ; i++) {
-                        if (khoi.getSchools().contains(namSinh) && khoi.getSchools().equals(que)){
-                            System.out.println(khoi.getSchools().toString());
+                    if (khoi!=null) {
+                        for (int i = 0; i < khoi.getSchools().size(); i++) {
+                            if (khoi.getSchools().get(i).getNgaySinh().getYear() == namSinh && khoi.getSchools().get(i).getQueQuan().equalsIgnoreCase(que)) {
+                                System.out.println(khoi.getSchools().toString());
+                            }else {
+                                System.out.println("không có bạn nào!");
+                            }
                         }
+                    }else {
+                        System.out.println("không có bạn nào!");
                     }
                     break;
                 case 3:
-                    String lop = "10A1";
-                    for (int i = 0; i < khoi.getSchools().size(); i++) {
-                        if (khoi.getSchools().equals(lop)){
-                            System.out.println(khoi.getSchools().toString());
+                    if (khoi != null) {
+                        String lop = "10A1";
+                        for (int i = 0; i < khoi.getSchools().size(); i++) {
+                            if (khoi.getLop().equalsIgnoreCase(lop)) {
+                                System.out.println(khoi.getSchools().toString());
+                            } else {
+                                System.out.println("không có lớp 10A1 nào!");
+                            }
                         }
+                    }else {
+                        System.out.println("không có lớp 10A1 nào!");
                     }
                     break;
                 case 0:
